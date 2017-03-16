@@ -23,25 +23,24 @@
 	        <input id="join" class="btn btn-primary" type="submit" value="Join the battle">
 	      </span>
 	    </div>
-	    <div class="color-select">
+	    <div class="color-select" col-md-12>
 	    	<label>Choose your color:</label>
 	      	<ul class="color-selection">
-	      		<li class="selected" data-tank="1">
-	      	         <img src="img/blob1.png">	
+	      		<li data-blob="1">
+	      	         <img class="blob_image" src="img/blob1.png" height=150 width=150>	
 			</li>
-	      		<li data-tank="2">
-	      	         <img src="img/blob2.png">	
+	      		<li data-blob="2">
+	      	         <img class="blob_image" src="img/blob2.png" height=150 width=150>	
 			</li>
-	      		<li data-tank="3">
-	      	         <img src="img/blob3.png">	
+	      		<li data-blob="3">
+	      	         <img class="blob_image" src="img/blob3.png" height=150 width=150>	
 			</li>
 	      	</ul>
     	</div>
 	</div>
 
 	<div id="arena" class="arena">
-	</div>
-	
+	</div>	
 	
 	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../node_modules/socket.io/lib/socket.io.js"></script>

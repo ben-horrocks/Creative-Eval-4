@@ -1,3 +1,9 @@
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,43 +13,25 @@ a {
   color: #00B7FF;
 }
 
-
-
-.tank-selection{
-	display: inline-block;
-	width: 350px;
-	padding: 0;
-	list-style-type: none;
-	margin: 20px auto 0 auto;
+.color-selection{
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px;
+  width: 350px;
 }
 
-.tank-select label{
+.color-select label{
 	display: inline-block;
-	margin: 10px 0;
 	width: 100%;
 	text-align: center;
+	margin-top: 40px;
 }
 
-.tank-selection li{
-	display: inline-block;
-	float: left;
-	width: 33%;
-	text-align: center;
-	cursor: pointer;
-	border: 2px solid #eee;
-	padding: 10px 0;
+.color-selection li{
+	display: inline;
+	margin:10px;
 }
 
-.tank-selection li.selected{
-	border: 2px solid #158cba;
-	-webkit-border-radius: 5px;
-	   -moz-border-radius: 5px;
-		 -o-border-radius: 5px;
-			border-radius: 5px;
-	border-radius: 5px;
+.blob_image{
+  height=10px;
 }
-	      		
-	      		
-	      		
-	      		
-	      		
