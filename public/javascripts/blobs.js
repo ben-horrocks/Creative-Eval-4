@@ -18,7 +18,7 @@ function Game(arenaId, w, h, socket)
 
 Game.prototype = {
 
-        addTank: function(id, type, isLocal, x, y, hp){
+        addBlob: function(id, type, isLocal, x, y, hp){
                 var t = new Blob(id, type, this.$arena, this, isLocal, x, y);
                 if(isLocal){
                         this.localBlob = t;
@@ -27,7 +27,7 @@ Game.prototype = {
                 }
         },
 
-        removeTank: function(tankId){
+        removeBlob: function(blobId){
                 //Remove blob object
                 this.blobs = this.blobs.filter( function(t){return t.id != blobId} );
                 //remove blob from dom
@@ -109,7 +109,7 @@ function Blob(id, type, $arena, game, isLocal, x, y){
         this.materialize();
 }
 
-Tank.prototype = {
+Blob.prototype = {
 
         materialize: function(){
                 this.$arena.append('<div id="' + this.id + '" class="tank tank' + this.type + '"></div>');
@@ -187,7 +187,7 @@ Tank.prototype = {
                                         t.dir[0] = 0;
                                         break;
                         }
-                }));
+                });
 
         },
 
