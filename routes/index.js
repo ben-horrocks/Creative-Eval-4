@@ -59,6 +59,25 @@ io.on('connection', function(client) {
   });
 });
 
+  client.on('sync', function(data){
+    // Receive data from clients
+    if(data.blob != undefined){
+      game.syncBlob(data.blob);
+    }
+    //Broadcast data to clients
+    client.emit('sync', game.getData());
+    client.broadcast.emit('sync', game.getData());
+
+    // Do cleanup after sending data, so the clients know
+    // when the blob dies
+    game.cleanDeadBlobs();
+    counter++;i
+  });
+
+  client.on('leaveGame', function(blobId){
+
+  });
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
