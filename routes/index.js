@@ -57,7 +57,6 @@ io.on('connection', function(client) {
 
     game.addBlob({ id: blob.id, color: blob.color, score: BLOB_INIT_SCORE});
   });
-});
 
   client.on('sync', function(data){
     // Receive data from clients
@@ -77,6 +76,7 @@ io.on('connection', function(client) {
   client.on('leaveGame', function(blobId){
 
   });
+});
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
