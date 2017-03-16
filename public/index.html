@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blobber</title>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+        <title>Blobber</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
-
 <body>
-  <h1>Blob Me</h1>
-    <div id="arena" class="arena">
-  </div>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
 
-  <script type="text/javascript" src="javascript/socket.io.js"></script>
-  <script type="text/javascript" src="javascript/blobs.js"></script>
-  <script type="text/javascript" src="javascript/client.js></script>
+        <h1>Blob Me</h1>
+	<div id="prompt" class="name-prompt">
+		<div class="input-group">
+	      <input id="blob-name" type="text" class="form-control" placeholder="Name your blob" autocomplete="off">
+	      <span class="input-group-btn">
+	        <input id="join" class="btn btn-primary" type="submit" value="Join the battle">
+	      </span>
+	    </div>
+	    <div class="color-select">
+	    	<label>Choose your color:</label>
+	      	<ul class="color-selection">
+	      		<li class="selected" data-tank="1">
+	      		
+			</li>
+	      		<li data-tank="2">
+	      		
+			</li>
+	      		<li data-tank="3">
+	      		
+			</li>
+	      	</ul>
+    	</div>
+	</div>
+
+	<div id="arena" class="arena">
+	</div>
+	
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/socket.io.js"></script>
+	<script type="text/javascript" src="js/tanks.js"></script>
+	<script type="text/javascript" src="js/client.js"></script>
+
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
 </body>
 </html>
-
